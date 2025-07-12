@@ -1,0 +1,232 @@
+watch_stylesheet: true
+watch_config: true
+debug: false
+komorebi:
+  start_command: "komorebic start"
+  stop_command: "komorebic stop"
+  reload_command: "komorebic stop && komorebic start --whkd"
+bars:
+  status-bar:
+    enabled: true
+    screens: ['*'] 
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      center: false
+    blur_effect:
+      enabled: false 
+      acrylic: false
+      dark_mode: false
+      round_corners: false
+      border_color: None
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 34
+    padding:
+      top: 6
+      left: 100
+      bottom: -5
+      right: 100
+    widgets:
+      left: ["komorebi_workspaces","komorebi_active_layout","active_window"]
+      center: ["clock","weather"]
+      right: ["media","volume","power_menu"]
+widgets:
+  media:
+    type: "yasb.media.MediaWidget"
+    options:
+      label: "\uf001 {title}"
+      label_alt: "\uf001 {artist}"
+      max_field_size:
+        label: 35
+        label_alt: 30
+      show_thumbnail: false
+      controls_only: false
+      controls_left: false
+      controls_hide: true
+      hide_empty: true
+      thumbnail_alpha: 0
+      thumbnail_padding: 0
+      thumbnail_corner_radius: 0
+  cava:
+    type: "yasb.cava.CavaWidget"
+    options:
+      bar_height: 12
+      min_bar_height: 0
+      gradient: 1
+      reverse: 0
+      foreground: "#d3c6aa"         
+      gradient_color_1: "#5e81ac"   
+      gradient_color_2: "#5e81ac"    
+      gradient_color_3: "#5e81ac"  
+      bars_number: 8
+      bar_spacing: 2
+      bar_width: 4
+      sleep_timer: 2
+      hide_empty: false
+      container_padding:
+        top: 2
+        left: 8
+        bottom: 0
+        right: 8
+  clock:
+      type: "yasb.clock.ClockWidget"
+      options:
+        label: "{%I:%M %p}"
+        label_alt: "{%a, %d %b %H:%M:%S}"
+        timezones: [] #Looking up time zone info from registry
+  komorebi_workspaces:
+      type: "komorebi.workspaces.WorkspaceWidget"
+      options:
+          label_offline: "\u26a1 Offline"
+          label_workspace_btn: "\udb81\udc3d"
+          label_workspace_active_btn: ""
+          label_workspace_populated_btn: "\udb81\udc3e"
+          label_default_name: "{index}"
+          label_zero_index: false
+          hide_empty_workspaces: false
+          hide_if_offline: false
+          animation: true
+          container_padding:
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0 
+  komorebi_active_layout:
+      type: "komorebi.active_layout.ActiveLayoutWidget"
+      options:
+        hide_if_offline: true
+        label: "{icon}"
+        layouts: ['bsp', 'columns', 'rows', 'grid', 'vertical_stack', 'horizontal_stack', 'ultrawide_vertical_stack','right_main_vertical_stack']
+        layout_icons:
+          bsp: "BSP"
+          columns: "COLS"
+          rows: "ROWS"
+          grid: "GRID"
+          vertical_stack: "V-STACK"
+          horizontal_stack: "H-STACK"
+          ultrawide_vertical_stack: "W-STACK"
+          right_main_vertical_stack: "RMV-STACK"
+          monocle: "MONOCLE"
+          maximised: "MAX"
+          floating: "FLOATING"
+          paused: "PAUSED"
+        callbacks:
+          on_left: 'next_layout'
+          on_middle: 'toggle_monocle'
+          on_right: 'prev_layout'
+        container_padding: 
+          top: 0
+          left: 0
+          bottom: 0
+          right: 0
+  weather:
+      type: "yasb.weather.WeatherWidget"
+      options:
+        label: "<span>{icon}</span> {temp}"
+        label_alt: "{location}: {conditions}, Min {min_temp}, Max {max_temp}, Humidity {humidity}"
+        api_key: ''
+        update_interval: 600 #Update interval in seconds, Min 600
+        hide_decimal: true
+        location: 'vietnam,hanoi'
+        callbacks:
+          on_left: "toggle_label"
+        icons: 
+          sunnyDay: "\ue30d"
+          clearNight: "\ue32b"
+          cloudyDay: "\udb81\udd99"
+          cloudyNight: "\ue311"
+          rainyDay: "\udb81\ude7e"
+          rainyNight: "\udb81\ude7e"
+          snowyIcyDay: "\udb81\udd98"
+          snowyIcyNight: "\udb81\udd98"
+          blizzardDay: "\uebaa"
+          default: "\uebaa"
+          # https://www.weatherapi.com/docs/
+          # Usage {temp}, {min_temp}, {max_temp}, {temp_f}, {min_temp_f}, {max_temp_f}, {location}, {humidity}, {icon}, {conditions}
+  volume:
+      type: "yasb.volume.VolumeWidget"
+      options:
+        label: "<span>{icon}</span> {level}"
+        label_alt: "{volume}"
+        volume_icons:
+          - "\ueee8"  # Icon for muted
+          - "\uf026"  # Icon for 0-10% volume
+          - "\uf027"  # Icon for 11-30% volume
+          - "\uf027"  # Icon for 31-60% volume
+          - "\uf028"  # Icon for 61-100% volume
+        callbacks:
+          on_right: "exec cmd.exe /c start ms-settings:sound"
+  power_menu:
+      type: "yasb.power_menu.PowerMenuWidget"
+      options:
+        label: "\uf011"
+        uptime: false
+        blur: False
+        blur_background: false
+        animation_duration: 50 # Milisecond 
+        button_row: 5 # Number of buttons in row, min 1 max 5
+        buttons:
+          signout: ["\udb80\udf43","Sign out"]
+          shutdown: ["\uf011","Shut Down"]
+          restart: ["\uead2","Restart"]
+          hibernate: ["\uf28e","Hibernate"]
+          cancel: ["\udb81\udf3a","Cancel"]
+  active_window:
+      type: "yasb.active_window.ActiveWindowWidget"
+      options:
+        label: "{win[title]}"
+        label_alt: ""
+        label_no_window: ""
+        label_icon: false
+        label_icon_size: 12
+        max_length: 36
+        max_length_ellipsis: "..."
+        monitor_exclusive: true
+  battery:
+      type: "yasb.battery.BatteryWidget"
+      options:
+        label: "<span>{icon}</span>{percent}%"
+        label_alt: "{icon} {percent}% | time: {time_remaining}"
+        charging_options:
+          icon_format: "{charging_icon}"
+  language:
+      type: "yasb.language.LanguageWidget"
+      options:
+        label: "{lang[language_code]}"
+        label_alt: "{lang[full_name]}"
+        update_interval: 1
+        callbacks:
+          on_left: "toggle_label"
+          on_middle: "do_nothing"
+          on_right: "do_nothing"
+  memory:
+      type: "yasb.memory.MemoryWidget"
+      options:
+        label: "<span>\uf4bc</span> {virtual_mem_free}/{virtual_mem_total}"
+        label_alt: "<span>\uf4bc</span> VIRT: {virtual_mem_percent}% SWAP: {swap_mem_percent}%"
+        update_interval: 5000
+        callbacks:
+          on_left: 'toggle_label'
+          on_middle: 'do_nothing'
+          on_right: 'do_nothing'
+        memory_thresholds:
+          low: 25
+          medium: 50
+          high: 90
+  obs:
+    type: "yasb.obs.ObsWidget"
+    options:  
+      connection:
+        host: "193.147.0.101"
+        port: 4400
+        password: "yourstrongpassword:3"
+      icons:
+        recording: "\ueba7"
+        stopped: "\ueba5"
+        paused: "\ueba7"
+      hide_when_not_recording: true
+      blinking_icon: true

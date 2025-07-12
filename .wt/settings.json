@@ -1,0 +1,211 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": "toggleFocusMode",
+            "id": "User.toggleFocusMode"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        }
+    ],
+    "copyOnSelect": true,
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "initialPosition": "960,540",
+    "keybindings": 
+    [
+        {
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.toggleFocusMode",
+            "keys": "shift+t"
+        },
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        }
+    ],
+    "launchMode": "focus",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "antialiasingMode": "grayscale",
+            "colorScheme": "wal",
+            "cursorColor": "#C3C5C6",
+            "cursorHeight": 25,
+            "cursorShape": "emptyBox",
+            "experimental.pixelShaderPath": null,
+            "experimental.retroTerminalEffect": false,
+            "experimental.rightClickContextMenu": true,
+            "font": 
+            {
+                "colorGlyphs": false,
+                "face": "Maple Mono NF",
+                "features": 
+                {
+                    "calt": 1
+                },
+                "size": 12,
+                "weight": "bold"
+            },
+            "opacity": 65,
+            "padding": "12",
+            "showMarksOnScrollbar": false,
+            "useAcrylic": true
+        },
+        "list": 
+        [
+            {
+                "colorScheme": "wal",
+                "commandline": "\"C:\\Users\\ngxuanchat\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe\" -NoLogo",
+                "cursorShape": "underscore",
+                "font": 
+                {
+                    "cellHeight": "1.2",
+                    "face": "UbuntuMono Nerd Font Propo",
+                    "size": 13.5
+                },
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "Alacritty",
+                "opacity": 80,
+                "scrollbarState": "hidden",
+                "source": "Windows.Terminal.PowershellCore",
+                "useAcrylic": true
+            },
+            {
+                "guid": "{4def34a1-1401-5a9b-94d9-2a1e1b4c7466}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{1f6405dc-98a1-52c0-ad6f-b4f67a6049ca}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{70fdca93-2920-53d6-a7a6-39ec64701cf4}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Microsoft.WSL"
+            },
+            {
+                "colorScheme": "One Half Dark",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe -i -l",
+                "cursorShape": "underscore",
+                "font": 
+                {
+                    "face": "UbuntuMono Nerd Font Propo",
+                    "size": 13.5
+                },
+                "guid": "{f7a0903f-10d8-41a0-a686-37f4272758be}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git",
+                "opacity": 80,
+                "scrollbarState": "hidden",
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": true
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#2E3440",
+            "black": "#3B4252",
+            "blue": "#81A1C1",
+            "brightBlack": "#4C566A",
+            "brightBlue": "#81A1C1",
+            "brightCyan": "#8FBCBB",
+            "brightGreen": "#A3BE8C",
+            "brightPurple": "#B48EAD",
+            "brightRed": "#BF616A",
+            "brightWhite": "#ECEFF4",
+            "brightYellow": "#EBCB8B",
+            "cursorColor": "#81A1C1",
+            "cyan": "#88C0D0",
+            "foreground": "#D8DEE9",
+            "green": "#A3BE8C",
+            "name": "Nord",
+            "purple": "#B48EAD",
+            "red": "#BF616A",
+            "selectionBackground": "#434C5E",
+            "white": "#E5E9F0",
+            "yellow": "#EBCB8B"
+        },
+        {
+            "background": "#2E3440",
+            "black": "#12181C",
+            "blue": "#919F9B",
+            "brightBlack": "#5D6871",
+            "brightBlue": "#919F9B",
+            "brightCyan": "#BCC2BA",
+            "brightGreen": "#627C82",
+            "brightPurple": "#AEB5AE",
+            "brightRed": "#71827D",
+            "brightWhite": "#C3C5C6",
+            "brightYellow": "#718A8C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#BCC2BA",
+            "foreground": "#D8DEE9",
+            "green": "#627C82",
+            "name": "wal",
+            "purple": "#AEB5AE",
+            "red": "#71827D",
+            "selectionBackground": "#FFFFFF",
+            "white": "#C3C5C6",
+            "yellow": "#718A8C"
+        }
+    ],
+    "theme": "ModernDark",
+    "themes": 
+    [
+        {
+            "name": "ModernDark",
+            "tab": 
+            {
+                "background": "#00000000",
+                "iconStyle": "default",
+                "showCloseButton": "hover",
+                "unfocusedBackground": "#00000000"
+            },
+            "tabRow": 
+            {
+                "background": "terminalBackground",
+                "unfocusedBackground": "terminalBackground"
+            },
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        }
+    ],
+    "useAcrylicInTabRow": false
+}

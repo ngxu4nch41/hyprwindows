@@ -1,0 +1,28 @@
+{
+    "checksum": "9fda710e05aca710fdbf9395a5a75cd4",
+    "wallpaper": "C:/Users/ngxuanchat/Wallpapers/wp14660726_themed_catppuccin-mocha.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#12111b",
+        "foreground": "#c3c3c6",
+        "cursor": "#c3c3c6"
+    },
+    "colors": {
+        "color0": "#12111b",
+        "color1": "#7D8399",
+        "color2": "#9194AA",
+        "color3": "#CCABB9",
+        "color4": "#B4B2C9",
+        "color5": "#CFBACD",
+        "color6": "#D8C9D7",
+        "color7": "#c3c3c6",
+        "color8": "#5c5c71",
+        "color9": "#7D8399",
+        "color10": "#9194AA",
+        "color11": "#CCABB9",
+        "color12": "#B4B2C9",
+        "color13": "#CFBACD",
+        "color14": "#D8C9D7",
+        "color15": "#c3c3c6"
+    }
+}

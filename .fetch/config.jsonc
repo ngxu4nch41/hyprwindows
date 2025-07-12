@@ -1,0 +1,78 @@
+{
+  "logo": "arch",
+  "display": {
+    "separator": " ~ "
+  },
+  "modules": [
+    {
+      "type": "break"
+    },
+    {
+      "type": "title",
+      "format": "{user-name}  ngxu4nch41",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "custom",
+      "format": "─────────────────────────"
+    },
+    {
+      "type": "os",
+      "key": " ",
+      "format": "Arch Linux",
+      "keyColor": "white"
+    },
+    {
+      "type": "kernel",
+      "key": " ",
+      "keyColor": "yellow",
+      "format": "6.14.9-arch1-1"
+    },
+    {
+      "type": "packages",
+      "key": "󰏗 ",
+      "keyColor": "blue",
+      "format": "1023 (pacman) 458 (yay)"
+    },
+    {
+      "type": "wm",
+      "key": " ",
+      "keyColor": "magenta",
+      "format": "hyprland"
+    },
+    {
+      "type": "shell",
+      "key": " ",
+      "keyColor": "yellow",
+      "format": "zsh"
+    },
+    {
+      "type": "terminal",
+      "key": " ",
+      "keyColor": "bright_blue",
+      "format": "alacritty"
+    },
+    {
+      "type": "initsystem",
+      "key": " ",
+      "keyColor": "bright_white"
+    },
+    {
+      "type": "memory",
+      "key": " ",
+      "keyColor": "bright_green"
+    },
+    {
+      "type": "uptime",
+      "key": "󱦟 ",
+      "keyColor": "red"
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "colors",
+      "keyColor": "bright_red"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "checksum": "8d34edaee0566012d146324ef7f336d5",
+    "wallpaper": "C:/Users/ngxuanchat/Wallpapers/1.png",
+    "alpha": "100",
+    "special": {
+        "background": "#191e25",
+        "foreground": "#c5c6c8",
+        "cursor": "#c5c6c8"
+    },
+    "colors": {
+        "color0": "#191e25",
+        "color1": "#B58575",
+        "color2": "#DAA07A",
+        "color3": "#916F84",
+        "color4": "#7D9CB3",
+        "color5": "#9FAAB8",
+        "color6": "#B0B5BE",
+        "color7": "#c5c6c8",
+        "color8": "#626a77",
+        "color9": "#B58575",
+        "color10": "#DAA07A",
+        "color11": "#916F84",
+        "color12": "#7D9CB3",
+        "color13": "#9FAAB8",
+        "color14": "#B0B5BE",
+        "color15": "#c5c6c8"
+    }
+}
