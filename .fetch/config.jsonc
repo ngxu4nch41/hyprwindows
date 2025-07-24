@@ -1,78 +1,42 @@
 {
-  "logo": "arch",
+  "logo": "C://users//ngxuanchat//.config//fastfetch//ascii//cat.txt",
   "display": {
     "separator": " ~ "
   },
   "modules": [
     {
-      "type": "break"
-    },
-    {
-      "type": "title",
-      "format": "{user-name}  ngxu4nch41",
-      "keyColor": "magenta"
-    },
-    {
-      "type": "custom",
-      "format": "─────────────────────────"
-    },
-    {
       "type": "os",
-      "key": " ",
-      "format": "Arch Linux",
-      "keyColor": "white"
-    },
-    {
-      "type": "kernel",
-      "key": " ",
-      "keyColor": "yellow",
-      "format": "6.14.9-arch1-1"
-    },
-    {
-      "type": "packages",
-      "key": "󰏗 ",
-      "keyColor": "blue",
-      "format": "1023 (pacman) 458 (yay)"
-    },
-    {
-      "type": "wm",
-      "key": " ",
-      "keyColor": "magenta",
-      "format": "hyprland"
-    },
-    {
-      "type": "shell",
-      "key": " ",
-      "keyColor": "yellow",
-      "format": "zsh"
-    },
-    {
-      "type": "terminal",
-      "key": " ",
-      "keyColor": "bright_blue",
-      "format": "alacritty"
-    },
-    {
-      "type": "initsystem",
-      "key": " ",
+      "key": "OS",
+      "format": "w11",
       "keyColor": "bright_white"
     },
     {
-      "type": "memory",
-      "key": " ",
-      "keyColor": "bright_green"
+      "type": "wm",
+      "key": "WM",
+      "keyColor": "bright_red",
+      "format": "krbi_WM"
     },
     {
-      "type": "uptime",
-      "key": "󱦟 ",
-      "keyColor": "red"
+      "type": "packages",
+      "key" : "PK",
+      "keyColor": "bright_yellow",
+      "format": "1486"
     },
     {
-      "type": "break"
+      "type": "shell",
+      "key": "SH",
+      "keyColor": "bright_blue",
+      "format": "starship"
+    },
+    {
+      "type": "terminal",
+      "key": "TE",
+      "keyColor": "bright_cyan",
+      "format": "wt"
     },
     {
       "type": "colors",
-      "keyColor": "bright_red"
-    }
+      "symbol": "circle"
+    }  
   ]
 }
